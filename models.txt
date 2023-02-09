@@ -1,0 +1,42 @@
+from config import db
+
+
+class Customer (db.Model):
+    #id = db.Column(db.Integer, primary_key = True, nullable = True)
+    name = db.Column(db.String, nullable = True)
+    deliveryAddress = db.Column(db.String, nullable = True)
+    contact = db.Column(db.String, nullable = True)
+    active = db.Column(db.Boolean, nullable = True)
+
+class OrderStatus (db.Model):
+        #id = db.Column(db.Integer, primary_key = True, nullable = True)
+        CREATE = db.Column(db.Integer, nullable = True)
+        CREATE = db.Column(db.Integer, nullable = True)
+        CREATE = db.Column(db.Integer, nullable = True)
+        CREATE = db.Column(db.Integer, nullable = True)
+
+
+class Order (db.Model):
+    #id = db.Column(db.Integer, primary_key = True, nullable = True)
+    createDate = db.Column(db.Date, nullable = True)
+
+class OrderDetail (db.Model):
+    #id = db.Column(db.Integer, primary_key = True, nullable = True)
+    qty = db.Column(db.Integer, nullable = True)
+    taxStatus = db.Column(db.String, nullable = True)
+
+class Item (db.Model):
+    #id = db.Column(db.Integer, primary_key = True, nullable = True)
+    weight = db.Column(db.Float, nullable = True)
+    description = db.Column(db.String, nullable = True)
+
+class Payement (db.Model):
+    #id = db.Column(db.Integer, primary_key = True, nullable = True)
+    amount = db.Column(db.Float, nullable = True)
+
+
+
+
+
+
+
